@@ -34,4 +34,35 @@ public class UsuariosService {
                 System.out.println("No existe un usuario asociado a ese RUT");
             }
     }
+    public void registrarCompra(Tienda tienda) {
+        System.out.println("Ingrese el RUT del usuario: ");
+        String rut = sc.nextLine();
+
+        Usuarios usuario = tienda.getUsuarios().get(rut);
+
+        if (usuario != null) {
+            System.out.println("Ingrese el nombre del prodcuto comprado");
+            String producto = sc.nextLine();
+            usuario.agregarCompra(producto);
+            System.out.println("Producto agregado al historial de compras.");
+        } else {
+            System.out.println("No existe un usuario asociado a ese RUT");
+        }
+    }
+
+    public void registrarReservas(Tienda tienda) {
+        System.out.println("Ingrese el RUT del usuario: ");
+        String rut = sc.nextLine();
+        Usuarios usuario = tienda.getUsuarios().get(rut);
+
+        if (usuario != null) {
+            System.out.println("Ingrese el nombre del prodcuto reservado");
+            String producto = sc.nextLine();
+            usuario.agregarReserva(producto);
+            System.out.println("Producto agregado al historial de reservas");
+        } else {
+            System.out.println("No existe un usuario asociado a ese RUT");
+        }
+    }
+
 }

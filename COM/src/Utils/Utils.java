@@ -11,15 +11,17 @@ public class Utils {
         System.out.println("\n---Bienvenido a Speedforce Comics ---");
         System.out.println("1. Registrar miembro en la tienda");
         System.out.println("2. Ver datos de miembro activo");
-        System.out.println("3. Búsqueda de comics");
-        System.out.println("4. Búsqueda de mangas");
-        System.out.println("5. Búsqueda de Funkopop");
-        System.out.println("6. Búsqueda de Figuras");
-        System.out.println("7. Agregar comics a la tienda");
-        System.out.println("8. Agregar mangas a la tienda");
-        System.out.println("9. Agregar Funkopop a la tienda");
-        System.out.println("10. Agregar Figuras a la tienda");
-        System.out.println("11. Salir");
+        System.out.println("3. Registrar compra");
+        System.out.println("4. Registrar reservas");
+        System.out.println("5. Búsqueda de comics");
+        System.out.println("6. Búsqueda de mangas");
+        System.out.println("7. Búsqueda de Funkopop");
+        System.out.println("8. Búsqueda de Figuras");
+        System.out.println("9. Agregar comics a la tienda");
+        System.out.println("10. Agregar mangas a la tienda");
+        System.out.println("11. Agregar Funkopop a la tienda");
+        System.out.println("12. Agregar Figuras a la tienda");
+        System.out.println("13. Guardar usuarios y salir");
 
     }
 

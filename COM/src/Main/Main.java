@@ -54,15 +54,22 @@ public class Main {
                         String rutBuscado = sc.nextLine();
                         usuariosService.mostrarDatosUsuario(tienda, rutBuscado);
                         break;
-
                 case 3:
+                    usuariosService.registrarCompra(tienda);
+                    break;
+
+                case 4:
+                    usuariosService.registrarReservas(tienda);
+                    break;
+
+                case 5:
                     try {
                         servicesComics.buscarComics(tienda);
                     } catch (ComicNoDisponibleException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
-                case 4:
+                case 6:
                     try {
                         servicesManga.buscarMangas(tienda);
                     } catch (MangaNoDisponibleException e) {
@@ -70,14 +77,14 @@ public class Main {
                     }
                     break;
 
-                case 5:
+                case 7:
                     try {
                         servicesFunkoPops.buscarFunkoPop(tienda);
                     } catch (FunkoPopNoDisponibleException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
-                case 6:
+                case 8:
                     try {
                         servicesFiguras.buscarFigura(tienda);
                     } catch (FiguraNoDisponibleException e) {
@@ -85,25 +92,26 @@ public class Main {
                     }
                     break;
 
-                case 7:
+                case 9:
                     servicesComics.agregarComic(tienda);
                     break;
-                case 8:
+                case 10:
                     servicesManga.agregarManga(tienda);
                     break;
-                case 9:
+                case 11:
                     servicesFunkoPops.agregarFunkopop(tienda);
                     break;
-                case 10:
+                case 12:
                     servicesFiguras.agregarFigura(tienda);
                     break;
-                case 11:
+                case 13:
+                    tiendaService.guardarUsuarioDesdeArchivo(tienda);
                     System.out.println("Gracias por preferir Speedforce Comics");
                     break;
                 default:
                     System.out.println("Opcion no valida");
             }
-        } while (opcion != 11);
+        } while (opcion != 13);
 
         sc.close();
     }

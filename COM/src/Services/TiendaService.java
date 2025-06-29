@@ -5,11 +5,12 @@ import Comics.Comics;
 import Mangas.Manga;
 import Figuras.Figuras;
 import Funkopop.FunkoPop;
+import Usuario.Usuarios;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class TiendaService {
@@ -102,4 +103,32 @@ public class TiendaService {
             System.out.println("Error al leer el archivo");
         }
     }
+
+    public void guardarUsuarioDesdeArchivo(Tienda tienda) {
+        String archivo = "COM/usuarios.csv";
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo))) {
+            bw.write("Nombre, RUT, Correo, Direccion, HistorialCompras, HistorialReservas");
+            bw.newLine();
+
+            List<Usuarios> usuariosOrdenados = new ArrayList<>(tienda.getUsuarios().values());
+            usuariosOrdenados.sort(Comparator.comparing(Usuarios::getNombre));
+
+            for (Usuarios usuario : usuariosOrdenados) {
+
+                bw.write(usuario.getNombre() + "," +
+                        usuario.getRut() + "," +
+                        usuario.getCorreo() + "," +
+                        usuario.getDireccion() + "," +
+                        usuario.getHistorialCompras() + "," +
+                        usuario.getHistorialReservas());
+                bw.newLine();
+            }
+            System.out.println("Datos de usuarios guardados exitosamente en " + archivo);
+        } catch (IOException e) {
+            System.out.println("Error al guardar usuarios: " + e.getMessage());
+        }
+    }
+
 }
+
+
