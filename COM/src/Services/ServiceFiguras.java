@@ -26,4 +26,15 @@ public class ServiceFiguras {
                     "Lo sentimos, en este momento no tenemos stocke de " + nombreFigura);
         }
     }
+    public void agregarFigura(Tienda tienda) {
+        System.out.println("Ingrese el nombre de la figura que desea agregar: ");
+        String nombre = sc.nextLine();
+
+        Figuras f = new Figuras(nombre);
+        tienda.agregarFiguras(f);
+        tienda.getFigurasDisponible().add(nombre);
+
+        System.out.println("Figura agregado exitosamente");
+
+    }
 }

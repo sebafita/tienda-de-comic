@@ -12,6 +12,9 @@ public class Figuras {
         this.serie = serie;
         this.disponible = disponible;
     }
+    public Figuras(String nombre) {
+        this.nombre = nombre;
+    }
     public String getNombre() {
         return nombre;
     }

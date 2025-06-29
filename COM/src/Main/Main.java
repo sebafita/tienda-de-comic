@@ -83,16 +83,13 @@ public class Main {
                     servicesFunkoPops.agregarFunkopop(tienda);
                     break;
                 case 10:
-
-
-
-
-
-
-
-
-
-
+                    servicesFiguras.agregarFigura(tienda);
+                    break;
+                case 11:
+                    System.out.println("Saliendo del sistema. Gracias por preferir Speedforce Comics");
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
             }
         } while (opcion != 11);
 
