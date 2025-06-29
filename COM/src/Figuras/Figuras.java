@@ -14,6 +14,8 @@ public class Figuras {
     }
     public Figuras(String nombre) {
         this.nombre = nombre;
+        this.serie = "desconocido";
+        this.disponible = false;
     }
     public String getNombre() {
         return nombre;

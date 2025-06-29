@@ -12,6 +12,8 @@ public class Manga {
     }
     public Manga(String titulo) {
         this.titulo = titulo;
+        this.autor = "Desconocido";
+        this.disponible = true;
     }
 
     public String getTitulo() {

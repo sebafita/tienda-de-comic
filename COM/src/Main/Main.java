@@ -9,6 +9,7 @@ import Services.UsuariosService;
 import Services.ServicesManga;
 import Services.ServiceFiguras;
 import Services.ServiceFunkoPops;
+import Services.TiendaService;
 
 import Comics.ComicNoDisponibleException;
 import Mangas.MangaNoDisponibleException;
@@ -20,12 +21,23 @@ public class Main {
     public static void main(String[] args) {
         Tienda tienda = new Tienda();
         UsuariosService usuariosService = new UsuariosService();
+        TiendaService tiendaService = new TiendaService();
         ServicesComics servicesComics = new ServicesComics();
         ServicesManga servicesManga = new ServicesManga();
         ServiceFunkoPops servicesFunkoPops = new ServiceFunkoPops();
         ServiceFiguras servicesFiguras = new ServiceFiguras();
         Scanner sc = new Scanner(System.in);
+
+        tiendaService.cargarComicsDesdeArchivo(tienda);
+        tiendaService.cargarMangasDesdeArchivo(tienda);
+        tiendaService.cargarFunkopopDesdeArchivo(tienda);
+        tiendaService.cargarFigurasDesdeArchivo(tienda);
+
+        System.out.println("Los datos han sido cargados correctamente desde los archivos");
+
         int opcion;
+
+
 
         do {
             Utils.mostrarMenu();
@@ -86,7 +98,7 @@ public class Main {
                     servicesFiguras.agregarFigura(tienda);
                     break;
                 case 11:
-                    System.out.println("Saliendo del sistema. Gracias por preferir Speedforce Comics");
+                    System.out.println("Gracias por preferir Speedforce Comics");
                     break;
                 default:
                     System.out.println("Opcion no valida");

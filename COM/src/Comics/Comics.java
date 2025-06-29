@@ -13,14 +13,18 @@ public class Comics {
 
     public Comics(String titulo) {
         this.titulo = titulo;
+        this.autor = "Desconocido";
+        this.disponible = true;
     }
     public String getTitulo() {
         return titulo;
     }
     public String getAutor() {
+
         return autor;
     }
     public boolean isDisponible() {
+
         return disponible;
     }
     public void disponible() throws ComicNoDisponibleException {

@@ -11,7 +11,7 @@ public class ServicesManga {
     private Scanner sc = new Scanner(System.in);
 
     public void buscarMangas(Tienda tienda) throws MangaNoDisponibleException {
-        System.out.print("Ingrese el manga que desea buscar: ");
+        System.out.println("Ingrese el manga que desea buscar: ");
         String tituloManga = sc.nextLine();
 
         boolean encontrado = false;
@@ -29,13 +29,13 @@ public class ServicesManga {
         }
     }
     public void agregarManga(Tienda tienda){
-        System.out.print("Ingrese el manga que desea agregar: ");
+        System.out.println("Ingrese el manga que desea agregar: ");
         String nombreManga = sc.nextLine();
 
         Manga nuevoManga = new Manga(nombreManga);
         tienda.agregarManga(nuevoManga);
         tienda.getMangasDisponible().add(nombreManga);
 
-        System.out.println("Manga agregado exitosamente");
+        System.out.println("Manga: " + nuevoManga.getTitulo() + " agregado exitosamente");
     }
 }

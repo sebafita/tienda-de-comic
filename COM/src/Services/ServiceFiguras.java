@@ -34,7 +34,7 @@ public class ServiceFiguras {
         tienda.agregarFiguras(f);
         tienda.getFigurasDisponible().add(nombre);
 
-        System.out.println("Figura agregado exitosamente");
+        System.out.println("Figura: " + f.getNombre() + " agregada existosamente");
 
     }
 }

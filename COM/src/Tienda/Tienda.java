@@ -31,12 +31,33 @@ public class Tienda {
         this.mangasDisponible = new HashSet<>();
         this.funkoPopDisponible = new HashSet<>();
         this.figurasDisponible = new HashSet<>();
+
     }
 
-    public void agregarComic(Comics comic) { comics.add(comic); }
-    public void agregarManga(Manga manga) { mangas.add(manga); }
-    public void agregarFunkoPop(FunkoPop fp) {funkoPops.add(fp); }
-    public void agregarFiguras(Figuras f) {figuras.add(f); }
+    public void agregarComic(Comics comic) {
+        comics.add(comic); }
+    public void agregarComic(String titulo) {
+        Comics nuevoComic = new Comics(titulo);
+        comics.add(nuevoComic);
+    }
+    public void agregarManga(Manga manga) {
+        mangas.add(manga); }
+    public void agregarManga(String titulo) {
+        Manga manga = new Manga(titulo);
+        mangas.add(manga);
+    }
+    public void agregarFunkoPop(FunkoPop fp) {
+        funkoPops.add(fp); }
+    public void agregarFunkoPop(String titulo) {
+        FunkoPop fp = new FunkoPop(titulo);
+        funkoPops.add(fp);
+    }
+    public void agregarFiguras(Figuras f) {
+        figuras.add(f); }
+    public void agregarFigura(String titulo) {
+        Figuras f = new Figuras(titulo);
+        figuras.add(f);
+    }
 
     public HashMap<String, Usuarios> getUsuarios() {
         return usuarios;

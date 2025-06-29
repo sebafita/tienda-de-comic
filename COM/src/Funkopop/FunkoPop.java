@@ -12,6 +12,8 @@ public class FunkoPop {
     }
     public FunkoPop(String nombre) {
         this.nombre = nombre;
+        this.serie = "desconocido";
+        this.disponible = false;
     }
 
     public String getNombre() {

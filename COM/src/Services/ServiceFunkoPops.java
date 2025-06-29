@@ -35,6 +35,6 @@ public class ServiceFunkoPops {
         tienda.agregarFunkoPop(nuevoFunkoPop);
         tienda.getFunkoPopDisponible().add(nombreFunkoPop);
 
-        System.out.println("FunkoPop agregado exitosamente");
+        System.out.println("FunkoPop: " + nuevoFunkoPop.getNombre() + " agregado existosamente");
     }
 }
