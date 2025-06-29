@@ -10,13 +10,20 @@ public class FunkoPop {
         this.serie = serie;
         this.disponible = disponible;
     }
+    public FunkoPop(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
+
         return nombre;
     }
     public String getSerie() {
+
         return serie;
     }
     public boolean isDisponible() {
+
         return disponible;
     }
 

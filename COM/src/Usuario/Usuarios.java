@@ -2,7 +2,7 @@ package Usuario;
 
 import Interface.InfoUsuario;
 
-public class Usuarios {
+public class Usuarios implements InfoUsuario {
     private String nombre;
     private String rut;
     private String correo;
@@ -15,25 +15,29 @@ public class Usuarios {
         this.direccion = direccion;
     }
     public String getNombre() {
+
         return nombre;
     }
     public String getRut() {
+
         return rut;
     }
     public String getCorreo() {
+
         return correo;
     }
     public String getDireccion() {
+
         return direccion;
     }
 
-    public class usuario implements InfoUsuario {
         @Override
         public void mostrarInformacionUsuario() {
             System.out.println("Nombre: " + nombre);
             System.out.println("Rut: " + rut);
             System.out.println("Correo: " + correo);
             System.out.println("Direccion: " + direccion);
-        }
+
     }
 }
+

@@ -37,4 +37,36 @@ public class Tienda {
     public void agregarManga(Manga manga) { mangas.add(manga); }
     public void agregarFunkoPop(FunkoPop fp) {funkoPops.add(fp); }
     public void agregarFiguras(Figuras f) {figuras.add(f); }
+
+    public HashMap<String, Usuarios> getUsuarios() {
+        return usuarios;
+    }
+    public void agregarUsuario(Usuarios usuario) {
+        usuarios.put(usuario.getRut(), usuario);
+    }
+    public ArrayList<Comics> getComics() {
+        return comics;
+    }
+    public HashSet<String> getComicsDisponible() {
+        return comicsDisponible;
+    }
+    public ArrayList<Manga> getMangas() {
+        return mangas;
+    }
+    public HashSet<String> getMangasDisponible() {
+        return mangasDisponible;
+    }
+    public ArrayList<FunkoPop> getFunkoPops() {
+        return funkoPops;
+    }
+    public HashSet<String> getFunkoPopDisponible() {
+        return funkoPopDisponible;
+    }
+    public ArrayList<Figuras> getFiguras() {
+        return figuras;
+    }
+    public HashSet<String> getFigurasDisponible() {
+        return figurasDisponible;
+    }
+
 }

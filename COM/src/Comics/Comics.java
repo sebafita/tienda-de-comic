@@ -10,6 +10,10 @@ public class Comics {
         this.autor = autor;
         this.disponible = disponible;
     }
+
+    public Comics(String titulo) {
+        this.titulo = titulo;
+    }
     public String getTitulo() {
         return titulo;
     }

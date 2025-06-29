@@ -10,6 +10,9 @@ public class Manga {
         this.autor = autor;
         this.disponible = disponible;
     }
+    public Manga(String titulo) {
+        this.titulo = titulo;
+    }
 
     public String getTitulo() {
         return titulo;
